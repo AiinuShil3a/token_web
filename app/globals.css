@@ -1,0 +1,19 @@
+/* global.css */
+.container-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Viewport Height */
+    width: 100vw; /* Viewport Width */
+}
+
+.card {
+    width: 80%; /* ความกว้างของการ์ด */
+    max-width: 400px; /* กำหนดความกว้างสูงสุด */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ใส่เงาให้การ์ด */
+    background-color: white; /* สีพื้นหลังของการ์ด */
+    text-align: center; /* ให้ข้อความอยู่ตรงกลาง */
+}
+

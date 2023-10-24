@@ -38,15 +38,19 @@ const Page: FC = () => {
 
   return (
     <div>
-      <Navbar />
-      <p>chainId: {contractChain}</p>
-      <p>isActive: {isActive.toString()}</p>
-      <p>accounts: {accounts ? accounts[0] : ''}</p>
-      {isActive ?
-        <button onClick={handleDisconnect}>Disconnect</button>
-        :
-        <button onClick={handleConnect}>Connect</button>
-      }
+      <Navbar isActive={isActive} onConnect={handleConnect} onDisconnect={handleDisconnect} accounts={accounts} />
+      <div className="container-center">
+        <div className="card">
+            <p>chainId: {contractChain}</p>
+            <p>isActive: {isActive.toString()}</p>
+            <p>accounts: {accounts ? accounts[0] : ''}</p>
+            {isActive ?
+                <button onClick={handleDisconnect}>Disconnect</button>
+                :
+                <button onClick={handleConnect}>Connect</button>
+            }
+        </div>
+    </div>
     </div>
   );
 }
